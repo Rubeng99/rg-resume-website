@@ -6,19 +6,37 @@
       	<meta name="description" content="Ruben's website showcasing projects, skills, and resume.">
 	      <meta name="keywords" content="Ruben, portfolio, projects, software engineering, IT, UCSD">
 	      <meta name="author" content="Ruben">
+        <link rel="stylesheet" href="text.css">
 
         <title> Experimental </title>
     </head>
 
     <header>
-    <hgroup>
+      <h1 class="element"> Experimental</h1>
+      <nav>
+          <strong>
+          <a class="aTab" href="/">Home</a>
+          <a class="aTab" href="/courses.html">Courses</a> 
+          <a class="aTab" href="/interest.html">Interests</a> 
+          <a class="aTab" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Embarrasing Pictures</a> 
+          <a class="aTab" href="/projects.html">Projects</a> 
+          <a class="aTab" href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">
+          LinkedIn
+            <img id="linkedin" src="Images/linkedin.svg" width="80px" height="80px"/>
+          </a>
+      </strong>
+      </nav>
+  </header>
+
+    <hgroup style="margin-bottom: 100px;">
         <h2>Experimental Page </h2>
         <p>The purpose of this page is to experiment with different html elements.</p>
       </hgroup>
     </header>
+
     <body>
     <dialog open>
-        <p>Don't press <kbd>CMD + Shift + W </kbd> </p>
+        <p class="alert">Don't press <kbd>CMD + Shift + W </kbd> </p>
         <form method="dialog">
             <audio id="swoosh" src="Music/Swoosh.mp3" type="audio/mp3"></audio>
             </audio>
@@ -26,7 +44,7 @@
         </form>
       </dialog>
 
-    <p> My favorite caffeinated drink is <del>Cold Brew</del> <ins> Matcha Latte </ins></p>
+    <p> My favorite caffeinated drink is <del>Cold Brew</del> <ins style="color:green"> Matcha Latte </ins></p>
     <p>
         My favorite quote is: <blockquote> “It is better to travel well than to arrive” </blockquote>
         My favorite book is <cite>The Godfather</cite> Novel by Mario Puzo
@@ -62,24 +80,43 @@
     <textarea id="w3review" name="w3review" rows="4" cols="50">
         Reason you choose this drink
     </textarea>
+    <hr>
 
-    <h1>Movie website</h1>
+      <hr>
+
+      <h2 style="text-align: center; font-family:RGFont">Search website</h1>
+    <nav>
+    
     <search>
-        <form action="./search/">
-        <label for="movie">Find a Movie</label>
+        <form action="#q">
+        <label for="movie">Search</label>
          <input type="search" id="movie" name="q" />
          <button type="submit">Search</button>
     </form>
     </search>
+  </nav>
+  <hr>
+
+  <label for="main"> Select a category: </label>
+  <select name="main" id="main">
+      <optgroup label="Main Website">
+          <option value="1"> 1 </option>
+          <option value="2"> 2 </option>
+      </optgroup>
+      <optgroup label="Projects">
+          <option value="1"> 1 </option>
+          <option value="2"> 2 </option>
+      </optgroup>
+  </select>
+
+  <hr>
 
 
+  <nav>
     <callout-box type="tip">
       💡 <strong>Tip:</strong> Use meaningful variable names to improve code readability.
   </callout-box>
   
-  <callout-box type="warning">
-      ⚠️ <strong>Warning:</strong> Always validate user input to prevent security vulnerabilities.
-  </callout-box>
   
   <callout-box type="note">
       📝 <strong>Note:</strong> This website is still under development.
@@ -88,7 +125,8 @@
   <hello-world></hello-world>  <!-- Default: "Hello, World!" -->
   <hello-world message="Welcome to my website!"></hello-world>
   <hello-world message="This is a custom element!"></hello-world>
-
+  </nav>
+  <aside style="align-content: start;">
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mi>E</mi>
       <mo>=</mo>
@@ -99,9 +137,30 @@
           <mn>2</mn>
       </msup>
     </math>
-    
+    </aside>
+    <!-- <aside> -->
+      <svg src="Images/linkedin.svg" width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="white" stroke-width="4" fill="blue" />
+    </svg>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid">
+        <strong> Your browser does not support this. </strong>
+    </canvas>
 
-    <footer><pre> Last Updated Feb 1<sup>st</sup>, 2025 </pre></footer>
+
+<!-- 
+<div class="loader">
+  <div id="box"></div>
+  <div id="hill"></div>
+</div> -->
+
+<!-- <script> 
+  var loadingScreen = document.querySelector(".loader");
+  window.addEventListener('load', function() { 
+  loadingScreen.style.display = 'none';
+})
+</script>
+     -->
+  <footer id="date"><pre> Last Updated Feb 10<sup>th</sup>, 2025 </pre></footer>
     </body>
    
 

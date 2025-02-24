@@ -1,0 +1,259 @@
+:root{
+    --grey-blue: #42526E; 
+    --black: #000000;
+}
+
+/* This CSS file is used for index and interest html */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+    padding: 1px;
+    border: 1px solid var(--black);
+    background-color: var( --grey-blue);
+    color: #ffffff
+}
+h1{
+    font-family: RGFont;
+    font-size: 50px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+body.below-body{
+    padding-top: 150px;
+    background-color: var(--grey-blue);
+}
+main{
+    margin-top: 125px;
+    border: 3px solid #000000;
+    background-color: var(--grey-blue);
+    
+}
+p.right{
+    text-align: center;
+}
+.image-text-container {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    gap: 15px; /* Space between image and text */
+    color:#d8d8d8;
+    font-family: RGFont;
+    background-color: #000000;
+}
+
+.image-text-container picture img {
+    width: 250px; /* Adjust image size as needed */
+    height: auto;
+}
+
+.image-text-container p {
+    flex: 1; /* Make the text take up the remaining space */
+    font-size: 18px;
+    color: white;
+}
+h2, h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* Used in index.html to Home, etc */
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8px;
+    gap: 15px;
+}
+nav a{
+    text-decoration: none;
+    padding: 5px 5px;
+    margin: 1px 0px;
+    border: 2px solid var(--black);
+    background-color: #ffffff;
+    color: var(--black);
+}
+
+
+/* Goes from column to row if pixels are 520 */
+@media (max-width: 520px) {
+    nav a {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; /* Allow items to stack on smaller screens */  
+    }
+    .course-div{
+        margin-top: 180px;
+    }
+}
+
+.nav a:hover{
+    background-color: rgb(38, 42, 255);
+}
+div.center{
+    flex-direction: row;
+}
+div.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 3px solid var(--black);
+}
+body.black{
+    background-color: var(--black);
+    padding: 1px 2px;
+    color: white;
+    padding-top: 150px;
+}
+img.center{
+    display: block;
+    border: 5px solid #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    /* width: 35%; */
+    width: 55dvh;
+    
+}
+#app{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    
+}
+#frame{
+    margin: 0 0;
+    padding: 0 0;
+    width: 130%;
+    color: white;
+    font-family: RGFont;
+    background-color: #000000;
+}
+
+#border{
+    border: 3px solid var(--black);
+}
+
+#box{
+    border: 3px solid var(--black);
+    flex: 1;
+    padding: 1px 5px;
+    margin: 1px 1px;
+    background-color: rgb(210, 206, 206);
+    transition: all 1s ease-out;
+    font-size: 30px;
+    font-weight: bold;
+}
+#box:hover{
+    background-color: white;
+}
+#box2{
+    border: 3px solid var(--black);
+    padding: 2px 20px;
+    font-weight: bold;
+}
+.blink_me{
+    text-align: center;
+    padding: 1px 1px;
+    background-color: rgb(217, 217, 217);
+    color:black;
+    margin: 1px 1px;
+    border-style: outset;
+    animation: blinker 2s linear infinite;
+}
+@keyframes blinker{
+    80%{
+        opacity: 50;
+    }
+}
+#center-title{
+    text-align: center;
+    color:#000000;
+    font-size: 40px;
+    padding: 1px 1px;
+    background-color: rgb(217, 217, 217);
+    margin-bottom: 1px;
+    border-style: outset;
+    font-family: RGFont;
+}
+#white-border{
+    border: 3px solid #ffffff;
+    margin: 1px 10px;
+}
+#date{
+    border: 2px solid var(--black);
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--grey-blue);
+}
+
+@font-face {
+    font-family: RGFont;
+    src: url(RGFont-Regular.ttf);
+}
+
+#grid-img{
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    color:white;
+}
+img,figcaption {
+    display: inline-block;
+    vertical-align: text-top;
+    font-family: RGFont;
+    font-size: 30px;
+  }
+p{
+    font-family: RGFont;
+    font-size: 30px;
+}
+#content {
+    display: flex;
+    justify-content: center; /* Centers the article in the container */
+}
+
+article {
+    display: flex;
+    flex-direction: column; /* Keeps the heading and paragraph stacked */
+    align-items: center; /* Centers heading and paragraph */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers images inside the container */
+    gap: 20px; /* Adds space between the images */
+    
+}
+
+.glow {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    padding: 1px 1px;
+    margin: 1px 1px;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0800e6, 0 0 40px #0047e2, 0 0 50px #006fe6, 0 0 60px #3a00e6, 0 0 70px #0082e6;
+    }
+    
+    to {
+      text-shadow: 0 0 30px #fff, 0 0 30px #4d5cff, 0 0 40px #4526f8, 0 0 50px #053fbc, 0 0 60px #4d85ff, 0 0 70px #120bdc, 0 0 80px #4d7aff;
+    }
+  }
+
+  hr{
+    color: white;
+  }
+
+  img.frame{
+    border-style: ridge;
+    border-right-width: 4px;
+}

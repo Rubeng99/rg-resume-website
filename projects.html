@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="proj.css">
+    <title> Ruben's Website </title>
+   </head>
+
+    <body>
+        <header>
+            <h1> Projects </h1>
+            <nav>
+                <strong>
+                <a href="/">Home</a>
+                <a href="/courses.html">Courses</a> 
+                <a href="/interest.html">Interest</a> 
+                <a href="/experiment.html">Experimental</a> 
+                <a href="https://github.com/rug005?tab=repositories">Github</a> 
+                <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">Linkedin</a> 
+                <a href="mailto:rug005@ucsd.edu">Email</a> 
+            </strong>
+            </nav>
+        </header>
+        
+        <div class="projects" style="margin-top: 130px;">  
+            
+            <!-- <div class="image-text-container"> -->
+            <nav id="grid-img">
+                <figure style="align-self: flex-end;">
+                    <hr>
+                    <h2> Theater </h2>
+                <picture style="align-items: center;">
+                    <source media="(max-width:500px)" srcset="Images/bts-ani.avif">
+                    <source media="(max-width:800px)" srcset="Images/arduino.avif">
+                    <img src="Images/parrot-bts.JPG" alt="Working on Animatronics" width="30%">
+                </picture>
+                <figcaption style="margin-top: 10px;">
+                    During a theater show I worked on an Animatronics using an Arduino board. This project
+                    was done in a team of three. One of my partner worked on the 3D design, while my other
+                    partner worked on the cosmetics. My role was to help with the arduino servos, and program
+                    the movements.
+                </figcaption>
+            </figure>                
+            <!-- </div> -->
+             </nav>
+        
+            <nav id="grid-img">
+                <figure id="frame">
+                    <video width="600" height="395" controls>
+                        <!--<source src = "Videos/Parrot.wmv" type = "video/wmv">-->
+                        <source src="Videos/Parrot2.MP4" type="video/mp4"> 
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption class="small">The video above shows the mechanics of the wings, and head.
+                        titled.
+                    </figcaption>
+                </figure>
+            </nav>
+        </div>
+        
+        <hr>
+        <div id="content">
+            <article>
+            <h2> Personal </h2>
+            <div class="img-container">
+                <img class="frame" src="/Images/lego-arduino.JPG" alt="Lego Arduino Build" width="500" height="300">
+                <img class="frame" src="/Images/lego-lightshow.gif" alt="Lego Arduino Build" width="500" height="300">
+            </div>
+                <p> I made an LED light show using Legos and an Arduino. </p>
+            </article>
+        </div>
+                
+        
+
+        <hr>
+        <!---------------------------------- Form to contact me  ---------------------------------->
+        
+        <!-- <h3 id="center-title"> Contact </h3> -->
+         <h3 class="glow"> Contact </h3>
+        <details> 
+            <summary class="blink_me"> PRESS HERE </summary>
+            <p> &#x26A0; WORK IN PROGRESS &#x26A0; <br> Currently working on implementation.</p>
+           <form action="/action_page.php">
+            <fieldset style="margin: 1px 1px; padding: 5px 5px;">
+                <legend> Contact Me </legend>
+                    <label for="fname"> First name:</label> 
+                    <input type="text" id="fname" name = "fname"> <!--</br>--><br>
+                    <label for="lname"> Last name:</label> 
+                    <input type="text" id="lname" name = "fname"><!--</br>--><br>
+                    <label for="email"> Email:</label>
+                    <input type="text" id="email" name = "email"><br>
+                    <br>
+
+                    <!-- Autocorrects Answer for User -->
+                    <label for="reason">Reason:</label>
+                        <input list="reasons" name="reason" id="reason">
+                        <datalist id="reasons">
+                        <option value="Work"> Work
+                        <option value="Website Issues"> Website Issues
+                        <option value="Other"> Other
+                    </datalist>
+        
+                    <!--  -->
+                    <p><label for="msgtext"> Comments </label></p>
+                    <textarea id="msgtext" name="msgtext" rows="3" cols="50">
+                    </textarea>
+                    <button>Submit</button>
+            </fieldset>
+           </form>
+           </details>
+
+
+           <hr>
+        <footer id="date"><pre> Last Updated Feb 16<sup>th</sup>, 2025 </pre></footer>
+            
+    </body>
+</html>

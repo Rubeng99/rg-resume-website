@@ -2,98 +2,81 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     <title> Ruben's Website </title>
    </head>
 
-    <body>
+    <body style="background-color: #657695;">
         <header>
-            <h1> Ruben's Resume </h1>
+            <h1> Ruben Gonzalez </h1>
             <nav>
                 <strong>
-                <a href="/">Home</a>
+                <a id="a-box" href="/">Home</a>
                 <a href="/courses.html">Courses</a> 
-                <a href="/interest.html">Interest</a> 
+                <a href="/interest.html">Interests</a> 
                 <a href="/experiment.html">Experimental</a> 
-                <a href="#">Github</a> 
-                <a href="#">Linkedin</a> 
+                <a href="/projects.html">Projects</a> 
+                <a href="https://github.com/rug005?tab=repositories">Github</a> 
+                <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">Linkedin</a> 
                 <a href="mailto:rug005@ucsd.edu">Email</a> 
             </strong>
             </nav>
         </header>
         
         <!-- Start of main -->
-         <div>
+         <div class="center">
         <main>
             <h2 id="center-title"> About Me </h2>
             <div class="container">
                 <div class="image">
-                <img src = "Images/selfie.avif" alt = "Personal Picture" width="200" height="150">
-                </div>
-                <p class="right">
+                <img src = "Images/selfie.avif" alt = "Personal Picture" width="300" height="255">
+                
+                <p class="right" style="font-family: RGFont;">
                 <div class="text">
-                Currently I'm studying <b><a href = "https://cse.ucsd.edu/"> Computer Science </a> <abbr title="University of California San Diego"
-                    >@UCSD</abbr> </b>
-                I'm expected to finish in <em>March 2025</em>. My plans are to work in <i>Software Engineering</i> or <i>Information Technology.</i> I believe I can
-                play a big part in a team.
+                I'm currently studying <b><a href="https://cse.ucsd.edu/" style="color: rgb(144, 203, 252)"> Computer Science </a> <abbr title="University of California San Diego"
+                    > at UCSD.</abbr> </b>
+                I'm expected to graduate in <em>March 2025</em>. After college, I plan to work in <i>Software Engineering.</i> or <i>Information Technology.</i> I believe I can
+                play a significant role in a team. 
 
             </p>    
             </aside>
+        </div>
             </div>
             </div>
         </div>
         </main>
-        <br>
-
-
-        <div>
-        <!-- Splits into my personal projects -->
-         <hr>
-        <h2>Projects</h2>
-        <div id="border">
-        <span style="border: 1px; color:black">
-        <div class="row">
-            <div class="column">
-            <picture>
-                <source media="(max-width:500px)" srcset="Images/bts-ani.avif">
-                <source media="(max-width:800px)" srcset="Images/arduino.avif">
-                <img src = "Images/parrot-bts.JPG" alt = "Working on Animatronics" style="width:100%;">
-            </picture>
-            <p>Worked on building an Animatronics using an Arduino.<p></p>
-            </div>
-        </span>
-            <div class="column">
-            <figure>
-                <video width="300" height="250" controls>
-                <!--<source src = "Videos/Parrot.wmv" type = "video/wmv">-->
-                <source src = "Videos/Parrot2.MP4" type="video/mp4"> 
-                Your broswer does not support the video tag.
-                </video>
-                <figcaption> Above is the parrot helped program and build using arduino </figcaption>
-            
-            </figure>
-        </div>
-    
-        <!-- </span> -->
-    </div>
-    </div>
-        <br>
-
-        <!-- Splits into my Programming Languages/Skills-->
-        <h3> Skills </h3>
+        <br> 
+        <!---------------------------------- Splits into my personal projects ---------------------------------->
+            <br>
+            <h3 id="center-title"> Work </h3>
+            <details>
+                <summary id="box"> Work Experience </summary>
+                <p style="background-color: white; padding: 10px 10px; margin: 1px 1px; font-family: 'Times New Roman', Times, serif; font-size: 30px;"> 
+                    Currently work for the Central Union High School District as a theater technican.
+                    My main role is to provide technical assistance with the lighting, sound, and live streaming system. I started the role
+                    as a High School student, and ever since have continued to work there.
+                    <br>
+                    Specialized in Live Streaming and Sound Engineering
+                    </ul>
+                </p>
+            </details>
+        <!---------------------------------- Splits into my Programming Languages/Skills  ---------------------------------->
+        <h3 id="center-title"> Skills </h3>
         <details>
             <summary id="box"> Programming Languages </summary>
-        <ul>
+        <ul id="box2">
             <li> Java </li>
             <li> C </li>
             <li> Python </li>
             <li> SQL </li>
+            <li> JavaScript </li>
         </ul>
         </details>
         
         <details>
             <summary id="box"> Skills </summary>
-            <ol>
+            <ol id="box2">
             <li> Problem Solving </li>
             <li> Creative </li>
             <li> Adaptability </li>
@@ -103,7 +86,7 @@
 
         <details>
             <summary id="box"> Languages </summary>
-        <dl>
+        <dl id="box2">
             <dt>I can read and write in...</dt>
                 <dd>English</dd>
                 <dd>Spanish</dd>
@@ -112,63 +95,15 @@
         </div>
            <hr> 
         <!-- </hr> -->
-                   <!-- <aside> -->
-                    <svg width="100" height="100">
-                        <circle cx="50" cy="50" r="40" stroke="white" stroke-width="4" fill="blue" />
-                    </svg>
-                    <canvas id="myCanvas" width="200" height="100" style="border:1px solid">
-                        <strong> Your browser does not support this. </strong>
-                    </canvas>
-                
-                <!-- </aside> -->
-
-
-            <!-- Form to contact me -->
-           <form action="/action_page.php">
-            <fieldset>
-                <legend> Contact Me </legend>
-                    <label for="fname"> First name:</label> 
-                    <input type="text" id="fname" name = "fname"> <!--</br>--><br>
-                    <label for="lname"> Last name:</label> 
-                    <input type="text" id="lname" name = "fname"><!--</br>--><br>
-                    <label for="email"> Email:</label>
-                    <input type="text" id="email" name = "email"><br>
             
-                
-                <label for="main"> Select a category: </label>
-                    <select name="main" id="main">
-                        <optgroup label="Main Website">
-                            <option value="1"> 1 </option>
-                            <option value="2"> 2 </option>
-                        </optgroup>
-                        <optgroup label="Projects">
-                            <option value="1"> 1 </option>
-                            <option value="2"> 2 </option>
-                        </optgroup>
-                    </select>
-                    <br>
-
-                    <!-- Autocorrects Answer for User -->
-                    <label for="reason">Reason:</label>
-                        <input list="reasons" name="reason" id="reason">
-                        <datalist id="reasons">
-                        <option value="Work"> Work
-                        <option value="Website Issues"> Website Issues
-                        <option value="Other"> Other
-                    </datalist>
+        <!---------------------------------- Form to contact me  ---------------------------------->
         
-                    <!--  -->
-                    <p><label for="msgtext">Comments</label></p>
-                    <textarea id="msgtext" name="msgtext" rows="3" cols="50">
-                    </textarea>
-                    <button>Submit</button>
-            </fieldset>
-           </form>
+        <h3 id="center-title"><a href = "/projects.html"> Contact </a></h3>
+    
 
-           
+
            <hr>
-        <footer><pre> Last Updated Feb 1<sup>st</sup>, 2025 </pre>
-        </footer>
+        <footer id="date" style="align-items: center;"><pre> Last Updated Feb 16<sup>th</sup>, 2025 </pre></footer>
             
     </body>
 </html>

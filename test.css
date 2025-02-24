@@ -1,0 +1,15 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    animation: myfirst 5s linear 5s infinite alternate;
+  }
+  @keyframes myfirst {
+    0%   {background-color:rgb(21, 0, 255); left:9px; top:0px;}
+    25%  {background-color:rgb(96, 11, 170); left:400px; top:0px;}
+    50%  {background-color:blue; left:200px; top:400px;}
+    75%  {background-color:rgb(13, 86, 13); left:0px; top:400px;}
+    100% {background-color:rgb(5, 22, 105); left:40px; top:10px;}
+  }
+
