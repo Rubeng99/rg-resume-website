@@ -2,6 +2,7 @@
     --grey-blue: #42526E; 
     --black: #000000;
     --white: #ffffff;
+    --backColor: #657695;
 }
 
 /* This CSS file is used for index and interest html */
@@ -247,4 +248,7 @@ style-off:hover{
     border: solid 2px black;
     margin: 20px;
     padding: 10px;
+}
+interest-frame{
+    
 }
