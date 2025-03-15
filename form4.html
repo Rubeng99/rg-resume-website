@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - JavaScript Enhanced</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --border-color: #ccc;
+        }
+        
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --border-color: #444;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        form {
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        input, textarea {
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-color); 
+            color: var(--text-color);
+        }
+        
+        /* .theme-toggle {
+            cursor: pointer;
+            padding: 5px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            text-align: center;
+        } */
+
+        #theme-toggle-id{
+            cursor: pointer;
+            padding: 5px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            text-align: center;
+            border: 2px solid #ccc;
+            /* border: 3px solid black;
+            padding-right: 430px;
+            text-align: center; */
+        }
+        
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 25px 40px 50px 25px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color:#000000;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        h2{
+            padding-left: 150px;
+        }
+        
+
+    </style>
+</head>
+
+<noscript> <p>The light feature does not work.</p></noscript>
+<!---------------------- BODY ---------------------->
+<body>
+    <!-- <button id="theme-toggle" class="theme-toggle">☀️</button> -->
+    <h2>Contact Form</h2>
+    <div>
+    <p>
+        You can change my colors <br>
+        <button id="text-red-button">Red Text</button>
+        <button id= "text-green-button">Green Text</button>
+        <button id="text-blue-button">Blue Text</button>
+    </p>
+        <button id="background-red-button">Red Background</button>
+        <button id="background-green-button">Green Background</button>
+        <button id="background-blue-button">Blue Background</button>
+        <br>
+        <button id="font-1-button">Font 1</button>
+        <button id="font-2-button">Font 2</button>
+        <button id="font-3-button">Font 3</button>
+    </div>
+
+    <form action="https://httpbin.org/post" class="form-container" method="post" id="contact-form">
+
+        <button id="theme-toggle-id"> ☀️ </button>
+
+        <label for="name">Name (Required):</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+        <span class="error-message" id="name-error"></span>
+
+        <label for="email">Email (Required):</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="email-error"></span>
+
+        <label for="comments">Comments (Required, 10-300 chars, letters/numbers only):</label>
+        <textarea id="comments" name="comments" required minlength="10" maxlength="300"></textarea>
+        <span class="char-count" id="char-count">300 characters remaining</span>
+        <span class="error-message" id="comments-error"></span>
+
+        <input type="hidden" name="form-errors" id="form-errors">
+        <button type="submit">Submit</button>
+    </form>
+    <!---------------------- SCRIPT ---------------------->
+    <script>
+
+        const targetElement = document.querySelector('p');
+     
+            
+            document.getElementById('text-red-button').addEventListener('click', () => {
+            targetElement.style.color = 'red';
+            });
+            
+            document.getElementById('text-green-button').addEventListener('click', () => {
+            targetElement.style.color = 'green';
+            });
+            
+            document.getElementById('text-blue-button').addEventListener('click', () => {
+            targetElement.style.color = 'blue';
+            });
+
+            const targetElement2 = document.querySelector('html');
+            
+            document.getElementById('background-red-button').addEventListener('click', () => {
+            targetElement2.style.background = 'red';
+            });
+            
+            document.getElementById('background-green-button').addEventListener('click', () => {
+            targetElement2.style.background = 'green';
+            });
+            
+            document.getElementById('background-blue-button').addEventListener('click', () => {
+            targetElement2.style.background = 'blue';
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+            const targetElement3 = document.querySelector('body');
+            
+            document.getElementById('font-1-button').addEventListener('click', () => {
+                targetElement3.style.fontFamily = "Impact";
+            });
+            
+            document.getElementById('font-2-button').addEventListener('click', () => {
+                targetElement3.style.fontFamily = "Charcoal";
+            });
+            
+            document.getElementById('font-3-button').addEventListener('click', () => {
+                targetElement3.style.fontFamily = "sans-serif";
+            });
+            });
+        /* Gets element theme-toggle */
+        const themeToggle = document.getElementById("theme-toggle-id");
+        const body = document.body;
+
+
+        if (localStorage.getItem("theme") == "dark") {
+            body.classList.add("dark-mode");
+            themeToggle.textContent = "Night Mode 🌙";
+            themeToggle.style.color = "black";
+        }
+        
+        themeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                themeToggle.textContent = "Night Mode 🌙";
+                themeToggle.style.color = "black";
+            } else {
+                localStorage.setItem("theme", "light");
+                themeToggle.textContent = "Light Mode ☀️";
+                themeToggle.style.color = "light";
+            }
+        });
+    </script>
+    
+</body>
+</html>

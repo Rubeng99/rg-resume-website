@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color:bisque;
+        }
+        project-card{
+            display: grid;
+            align-items: start;
+            grid-template-rows: 200px 200px 200px 200px;
+            grid-template-columns: 200px 200px 200px 200px;
+            padding: 10px 70px;
+            margin: 100px 100px;
+            color:white;
+            font-weight: bold;
+            
+        }
+        nav{
+            padding: 10px 10px;
+            padding-bottom: 150px;
+            margin: 10px;
+            text-align: center;
+            border: solid 2px black;
+        }
+        #card1{
+            background-color: red;
+        }
+        #card2{
+            background-color: rgb(4, 0, 255);
+        }
+        #card3{
+            background-color: rgb(18, 177, 42);
+        }
+        #card4{
+            background-color: rgb(229, 10, 185);
+        }
+    </style>
+</head>
+
+<body>
+    <project-card>      
+        <nav id="card1"><h2>Interest Card</h2>
+        <picture>
+            <source media="(min-width:200px)" srcset="/Images/Hike1.jpg">
+            <a href="/interest.html">
+            <img src="/Images/Hike1.jpg" alt="Hike" style="width:100px;">
+            </a>
+        </picture>
+        </nav>
+    <!-- </project-card> -->
+
+    <!-- <project-card> -->
+        <nav id="card2"><h2>Courses Card</h2>
+            <picture>
+                <source media="(min-width:200px)" srcset="/Images/Hike1.jpg">
+                <a href="/courses.html">
+                <img src="/Images/lego-arduino.JPG" alt="Hike" style="width:100px;">
+                </a>
+            </picture>
+        </nav>
+    <!-- </project-card> -->
+        <nav id="card3"><h2>Experiental Card</h2>
+            <picture>
+                <source media="(min-width:200px)" srcset="/Images/Hike1.jpg">
+                <a href="/experiment.html">
+                <img src="/Images/lego-lightshow.gif" alt="Hike" style="width:100px;">
+                </a>
+            </picture>
+        </nav>
+    <!-- <project-card> -->
+        <nav id="card4"><h2>LinkedIn Card</h2>
+            <picture>
+                <source media="(min-width:200px)" srcset="/Images/Hike1.jpg">
+                <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">
+                <img src="/Images/linkedin.svg" alt="Hike" style="width:100px;">
+                </a>
+            </picture>
+        
+        </nav>
+    </project-card>
+
+
+    
+</body>
+
+<script>
+
+</script>
+
+</html>

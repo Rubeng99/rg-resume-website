@@ -80,18 +80,20 @@
         <details> 
             <summary class="blink_me"> PRESS HERE </summary>
             <p> &#x26A0; WORK IN PROGRESS &#x26A0; <br> Currently working on implementation.</p>
-           <form action="/action_page.php">
+           <form action="https://httpbin.org/post" method="post">
             <fieldset style="margin: 1px 1px; padding: 5px 5px;">
                 <legend> Contact Me </legend>
                     <label for="fname"> First name:</label> 
                     <input type="text" id="fname" name = "fname"> <!--</br>--><br>
-                    <label for="lname"> Last name:</label> 
-                    <input type="text" id="lname" name = "fname"><!--</br>--><br>
+                    
                     <label for="email"> Email:</label>
-                    <input type="text" id="email" name = "email"><br>
+                    <input type="email" id="email" name = "email" required>
+                    <span></span>
+                    <br>
                     <br>
 
                     <!-- Autocorrects Answer for User -->
+                     <!--
                     <label for="reason">Reason:</label>
                         <input list="reasons" name="reason" id="reason">
                         <datalist id="reasons">
@@ -99,11 +101,16 @@
                         <option value="Website Issues"> Website Issues
                         <option value="Other"> Other
                     </datalist>
+                    -->
+                    
         
                     <!--  -->
                     <p><label for="msgtext"> Comments </label></p>
-                    <textarea id="msgtext" name="msgtext" rows="3" cols="50">
+                    <textarea id="comments" name="comments" required maxlength="100" pattern="[A-Za-z]" aria-required="true" >This is a test!</textarea>
+                    <span></span>
+                    <!-- <textarea id="msgtext" name="msgtext" rows="3" cols="50">
                     </textarea>
+                    -->
                     <button>Submit</button>
             </fieldset>
            </form>

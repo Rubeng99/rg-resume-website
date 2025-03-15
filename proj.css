@@ -257,3 +257,31 @@ article {
     border-style: ridge;
     border-right-width: 4px;
 }
+
+input:user-invalid{
+    border: 2px solid red;
+}
+input:user-invalid + span:before{
+    content:"✖";
+    color: red;
+}
+
+input:valid + span:before{
+    content:"✅";
+    color: rgb(17, 169, 4);
+}
+
+input:invalid + span:before{
+    content:"✖";
+    color: red;
+}
+
+input:required, textarea:required {
+    border-left: 4px solid red;
+}
+input:valid, textarea:valid {
+    border-left: 4px solid green;
+}
+input:invalid, textarea:invalid {
+    border-left: 4px solid green;
+}

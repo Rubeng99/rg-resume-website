@@ -6,38 +6,41 @@
         <link rel="stylesheet" href="style.css">
     <title> Ruben's Website </title>
    </head>
-
+   
     <body style="background-color: #657695;">
         <header>
             <h1> Ruben Gonzalez </h1>
             <nav>
                 <strong>
-                <a id="a-box" href="/">Home</a>
                 <a href="/courses.html">Courses</a> 
                 <a href="/interest.html">Interests</a> 
                 <a href="/experiment.html">Experimental</a> 
                 <a href="/projects.html">Projects</a> 
+                <a href="/index2.html">Index</a> 
                 <a href="https://github.com/rug005?tab=repositories">Github</a> 
                 <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">Linkedin</a> 
                 <a href="mailto:rug005@ucsd.edu">Email</a> 
+                <button onclick="myFunction()">Test</button>
             </strong>
             </nav>
         </header>
-        
+
+        <div id = "div-back"> <!--Testing this div out-->
         <!-- Start of main -->
          <div class="center">
         <main>
-            <h2 id="center-title"> About Me </h2>
+            <h2 id="center-title"> Welcome to my website! </h2>
             <div class="container">
                 <div class="image">
-                <img src = "Images/selfie.avif" alt = "Personal Picture" width="300" height="255">
+
                 
                 <p class="right" style="font-family: RGFont;">
                 <div class="text">
-                I'm currently studying <b><a href="https://cse.ucsd.edu/" style="color: rgb(144, 203, 252)"> Computer Science </a> <abbr title="University of California San Diego"
-                    > at UCSD.</abbr> </b>
-                I'm expected to graduate in <em>March 2025</em>. After college, I plan to work in <i>Software Engineering.</i> or <i>Information Technology.</i> I believe I can
-                play a significant role in a team. 
+                
+                    &nbsp; I'm currently a <b><a href="https://cse.ucsd.edu/" style="color: rgb(69, 87, 226)"> Computer Science </a> student at the 
+                    <abbr title="University of California San Diego">  University of California San Diego.</abbr> </b>
+                My carrer goal would be to work in <i>Software Engineering</i> or <i>Information Technology.</i> <br> 
+                The purpose of this website is to demonstrate my abilities and skills to possible recruiters. I believe I can play a big role in any technical role I'm placed in.
 
             </p>    
             </aside>
@@ -52,36 +55,79 @@
             <h3 id="center-title"> Work </h3>
             <details>
                 <summary id="box"> Work Experience </summary>
-                <p style="background-color: white; padding: 10px 10px; margin: 1px 1px; font-family: 'Times New Roman', Times, serif; font-size: 30px;"> 
-                    Currently work for the Central Union High School District as a theater technican.
-                    My main role is to provide technical assistance with the lighting, sound, and live streaming system. I started the role
-                    as a High School student, and ever since have continued to work there.
+                <p style="background-color: white; padding: 10px 10px; margin: 1px 1px; font-family: 'Times New Roman', Times, serif; font-size: 20px;"> 
+                    &nbsp Currently working for the Central Union High School District as a Theater Technican 
+                    <a href= "https://www.instagram.com/jctheater/?hl=en" alt="JCT Instagram Page" >@Jimmie Cannon Theater</a>.
+                    My main role is to provide technical assistance with the their lighting, sound, and live streaming systems. I started the role
+                    as a High School student, and ever since have continued to work there. (On Call)
                     <br>
-                    Specialized in Live Streaming and Sound Engineering
+                    &nbsp; I Specialized in Live Streaming and Sound Engineering.
+                    <br>
                     </ul>
                 </p>
             </details>
         <!---------------------------------- Splits into my Programming Languages/Skills  ---------------------------------->
-        <h3 id="center-title"> Skills </h3>
+        <h3 id="center-title"> Technical Skills </h3>
+
         <details>
             <summary id="box"> Programming Languages </summary>
-        <ul id="box2">
+        <ol id="box2">
+            <p style="text-align: center;"> Ordered in most proficient </p>
             <li> Java </li>
-            <li> C </li>
+            <list-text> &nbsp; This is the first programming language I learned and the one I feel most comfortable with.
+                I've programmed in this language for multiple assignments, and group projects.
+            </list-text>
             <li> Python </li>
-            <li> SQL </li>
+            <list-text>  &nbsp; This is a language that I've used for classes such as Computer Vision, 
+                Introduction to Artificial Intelligence, Data Science in Practice. I've also used Python to create a
+                program that sorts my SD files by date and file type.
+             </list-text>
+            <li> C </li>
+            <list-text> 
+                &nbsp; I believe that programming in C is like a double edge sword. When it works it can do so many amazing things, however
+                when it doesn't... I'll be spending countless hours using GDB. I've programmed in C for most of my networks classes such as
+                Computer Networks, Wireless Networks, and a bit in my Operating Systems class.
+            </list-text>
             <li> JavaScript </li>
-        </ul>
+            <list-text> 
+                Used JavaScript to write this website, and while taking a Web Client Languages class.
+                <button id = "style-button">Click Me</button>
+            </list-text>
+            <li> SQL </li>
+            <list-text> 
+                Have not had much experience working in backend as of now, however I'm looking forward to expanding my skills in
+                languages such as SQL. I learned and used SQL for my Database System Principles class.
+            </list-text>
+            <li> C++ </li>
+            <list-text> 
+                I learned and programmed in this language while taking an Advanced Data Structures class. I've also programmed in C++ while
+                taking my Wireless Networks class.
+            </list-text>
+        </ol>
         </details>
         
         <details>
             <summary id="box"> Skills </summary>
-            <ol id="box2">
+            <ul id="box2">
             <li> Problem Solving </li>
+            <list-text> 
+               Have experience problem solving while working as a theater technican. Had to constantly solve technical problems such as
+               light board not working correctly, sound board not configured correctly, and live stream wireless connection issues.
+            </list-text>
             <li> Creative </li>
+            <list-text> 
+                My work experience has allowed me the freedom to be creative and think outside the box.
+            </list-text>
             <li> Adaptability </li>
+            <list-text> 
+                Being adaptable is one of my biggest strength and had to constantly adapt to new environments in the work place
+                and in my own personal life.
+            </list-text>
             <li> Time Management </li>
-            </ol>
+            <list-text> 
+                Being a college student and part time employee has enabled me with the skill to manage my time.
+            </list-text>
+            </ul>
         </details>
 
         <details>
@@ -89,21 +135,50 @@
         <dl id="box2">
             <dt>I can read and write in...</dt>
                 <dd>English</dd>
+                <list-text> 
+                    This is my dominant language. (L2)
+                </list-text>
                 <dd>Spanish</dd>
+                <list-text> 
+                    This is my non-dominant language. (L1)
+                </list-text>
         </dl>
         </details>
+        <footer id="date" style="align-items: center;"><pre> Last Updated March<sup>14th</sup>, 2025 </pre></footer>
         </div>
-           <hr> 
-        <!-- </hr> -->
+    </div>  
+</body>
             
         <!---------------------------------- Form to contact me  ---------------------------------->
         
-        <h3 id="center-title"><a href = "/projects.html"> Contact </a></h3>
+       <!--  <h3 id="center-title"><a href = "/projects.html"> Contact </a></h3> -->
     
-
-
-           <hr>
-        <footer id="date" style="align-items: center;"><pre> Last Updated Feb 16<sup>th</sup>, 2025 </pre></footer>
+           <script>
+            var msg = `<p><b>Page Title: </b>` + document.title + `<br/>`;
+            msg += `last modified: </b>` + document.lastModified + `</p>`;
+            var el = document.getElementById('footer');
+            el.innerHTML = msg;
+           </script>
+    
             
-    </body>
+
+
+    <script>
+        /* Inside Skills > JavaScript, On click changes from "Click Me" text to "Thank you" */
+        let buttonSwitch = document.getElementById("style-button");
+            buttonSwitch.addEventListener("click", function(){
+            document.getElementById("style-button").innerHTML = "Thank you";
+            buttonSwitch.style.color = "#0000ff";
+            buttonSwitch.style.cursor = "default";
+        });
+
+
+        /* Header button changes background from dark to light */
+        function myFunction(){
+            let element = document.body.getElementsByTagName('div-back');
+            element.classList.toggle("dark-mode");
+        };
+
+    body
+    </script>
 </html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form – JavaScript Enhanced Validation</title>
+  <style>
+    /* Base styles */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      position: relative;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    /* Visual cues for required/valid/invalid */
+    input:required,
+    textarea:required {
+      border-color: #007acc;
+    }
+    input:valid,
+    textarea:valid {
+      border-color: #090;
+    }
+    input:invalid,
+    textarea:invalid {
+      border-color: #d00;
+    }
+    /* Button styling */
+    button {
+      padding: 10px;
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    /* Output messages for errors and info */
+    output {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+    }
+    .error {
+      color: #d00;
+    }
+    .info {
+      color: #090;
+    }
+    /* Flash effect when illegal characters are typed */
+    .flash {
+      animation: flashAnimation 0.3s ease-in-out;
+    }
+    @keyframes flashAnimation {
+      0% { background-color: rgba(255, 0, 0, 0.5); }
+      100% { background-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <form id="contact-form" action="https://httpbin.org/post" method="POST" novalidate>
+    <!-- Name Field with a pattern to allow only letters and spaces -->
+    <label for="name">Name<span aria-hidden="true">*</span>:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      required 
+      minlength="2" 
+      maxlength="50" 
+      pattern="[A-Za-z\s]+" 
+      placeholder="Your full name" 
+    />
+    <output id="name-error" class="error"></output>
+    
+    <!-- Email Field -->
+    <label for="email">Email<span aria-hidden="true">*</span>:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      required 
+      placeholder="you@example.com" 
+    />
+    <output id="email-error" class="error"></output>
+    
+    <!-- Comments Field with a pattern restricting characters -->
+    <label for="comments">Comments<span aria-hidden="true">*</span>:</label>
+    <textarea 
+      id="comments" 
+      name="comments" 
+      required 
+      minlength="10" 
+      maxlength="300" 
+      placeholder="Your comments here..."
+      pattern="[A-Za-z0-9 .,?!'\"()\n\r-]+"
+    ></textarea>
+    <output id="comments-error" class="error"></output>
+    <output id="comments-info" class="info"></output>
+    
+    <!-- Hidden fields: one to help detect bots and one to hold error data -->
+    <input type="hidden" name="possible_bot" value="true" />
+    <input type="hidden" name="form-errors" id="form-errors" value="" />
+    
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Global array to capture form errors (each object is JSON-encodable)
+    var form_errors = [];
+
+    // Helper: Add an error to our error array
+    function addFormError(fieldName, errorMsg, value) {
+      form_errors.push({
+        field: fieldName,
+        error: errorMsg,
+        value: value,
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    // Masking function to prevent illegal characters (for single-character input)
+    function handleIllegalInput(event, regex, errorOutput) {
+      const char = event.key;
+      // Allow control keys (backspace, enter, arrow keys, etc.)
+      if (char.length !== 1) return;
+      if (!regex.test(char)) {
+        event.preventDefault();
+        // Flash the input field
+        event.target.classList.add('flash');
+        setTimeout(() => {
+          event.target.classList.remove('flash');
+        }, 300);
+        // Display error message in the dedicated error output
+        errorOutput.textContent = "Illegal character: " + char;
+        // Log this error to the global array
+        addFormError(event.target.name, "Illegal character: " + char, event.target.value + char);
+        // Fade out error message after 2 seconds
+        setTimeout(() => {
+          errorOutput.textContent = "";
+        }, 2000);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const nameField = document.getElementById('name');
+      const emailField = document.getElementById('email');
+      const commentsField = document.getElementById('comments');
+
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const commentsError = document.getElementById('comments-error');
+      const commentsInfo = document.getElementById('comments-info');
+      const formElement = document.getElementById('contact-form');
+      const formErrorsField = document.getElementById('form-errors');
+
+      // Define allowed regexes (for single-character checks) based on the pattern attributes:
+      const nameRegex = /^[A-Za-z\s]$/;
+      // Let the browser handle email format, so we won’t add extra masking for it.
+      const commentsRegex = /^[A-Za-z0-9 .,?!'"()\n\r-]$/;
+
+      // Attach keypress event for masking on name and comments fields
+      nameField.addEventListener('keypress', function(e) {
+        handleIllegalInput(e, nameRegex, nameError);
+      });
+      commentsField.addEventListener('keypress', function(e) {
+        handleIllegalInput(e, commentsRegex, commentsError);
+      });
+
+      // Character countdown for the comments textarea
+      commentsField.addEventListener('input', function(e) {
+        const max = parseInt(commentsField.getAttribute('maxlength'), 10);
+        const currentLength = commentsField.value.length;
+        const remaining = max - currentLength;
+        commentsInfo.textContent = remaining + " characters remaining";
+
+        // Change style based on thresholds
+        if (remaining < 10) {
+          commentsInfo.style.color = "#d00";  // Error (almost full)
+        } else if (remaining < 50) {
+          commentsInfo.style.color = "#e67e22"; // Warning
+        } else {
+          commentsInfo.style.color = "#090";    // All good
+        }
+      });
+
+      // Enhanced validation on form submission using the Constraint Validation API
+      formElement.addEventListener('submit', function(e) {
+        // Clear previous error data
+        form_errors = [];
+
+        // Validate each field and capture errors if any
+        if (!nameField.checkValidity()) {
+          const msg = nameField.validationMessage || "Invalid name";
+          nameError.textContent = msg;
+          addFormError(nameField.name, msg, nameField.value);
+        }
+        if (!emailField.checkValidity()) {
+          const msg = emailField.validationMessage || "Invalid email";
+          emailError.textContent = msg;
+          addFormError(emailField.name, msg, emailField.value);
+        }
+        if (!commentsField.checkValidity()) {
+          const msg = commentsField.validationMessage || "Invalid comments";
+          commentsError.textContent = msg;
+          addFormError(commentsField.name, msg, commentsField.value);
+        }
+
+        // Set the hidden field "form-errors" with our error data as JSON
+        formErrorsField.value = JSON.stringify(form_errors);
+
+        // (Optional) Prevent submission if you prefer to require correction:
+        // if (form_errors.length > 0) {
+        //   e.preventDefault();
+        // }
+      });
+    });
+  </script>
+</body>
+</html>

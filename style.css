@@ -1,6 +1,7 @@
 :root{
     --grey-blue: #42526E; 
     --black: #000000;
+    --white: #ffffff;
 }
 
 /* This CSS file is used for index and interest html */
@@ -131,17 +132,18 @@ h3.align{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--black,black);
-    color: white;
+    background-color: var(--white,(255, 255, 255));
+    color: rgb(0, 0, 0);
+ 
 }
 .image{
     max-width: 100%;
     max-height: 100%;
 }
 .text{
-    font-size: 40px;
+    
     padding: 1dvh 10dvw;
-    font-family: RGFont;
+    font-family: 'Times New Roman', Times, serif;
 }
 .row::after{
     content:"";
@@ -179,7 +181,6 @@ h3.align{
     background-color: white;
     margin: 1px 1px;
     font-weight: bold;
-    font-family: RGFont;
     font-size: 30px;
 }
 .blink_me{
@@ -201,6 +202,7 @@ h3.align{
     padding: 1px 1px;
     background-color: rgb(217, 217, 217);
     margin-bottom: 1px;
+    
     border-style: outset;
 }
 #white-border{
@@ -219,3 +221,30 @@ h3.align{
     src: url(RGFont-Regular.ttf);
 }
 
+list-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 2px;
+}
+
+#style-button{
+    color: black;
+    cursor: pointer;
+}
+style-off:hover{
+    font-size: 2rem;  
+}
+#lights-off{
+    background: rgb(43, 226, 107);
+}
+
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+#div-back{
+    border: solid 2px black;
+    margin: 20px;
+    padding: 10px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Form Validation</title>
+
+  <!---------------------- Start of style ---------------------->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 400px;
+      width: 100%;
+      display: grid;
+      grid-gap: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    /* Attribute Selector: Matches any input element whose type attribute value is "text" and "email" */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+    /* Visual feedback for valid and invalid input */
+    input:valid, textarea:valid {
+      border-color: green;
+    }
+    input:invalid, textarea:invalid {
+      border-color: red;
+    }
+    /* Styling the required field indicator */
+    .required-indicator {
+      color: red;
+    }
+    /* Output areas for messages */
+    output {
+      display: block;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+    .error-output {
+      color: red;
+    }
+    .info-output {
+      color: rgb(52, 154, 52);
+    }
+    /* Submit button */
+    input[type="submit"] {
+      padding: 10px;
+      background: #2968ab;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: RGFont;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    @font-face{
+        font-family: RGFont;
+        src: url(RGFont-Regular.ttf);
+        }
+  </style>
+</head>
+<!---------------------- End of style ---------------------->
+<body>
+  <form class="contact-form" action="https://httpbin.org/post" method="POST">
+    <!-- Name Field -->
+    <label for="name">Name <span class="required-indicator">*</span>:</label>
+    <input type="text" id="name" name="name" required minlength="2" maxlength="50"
+           title="Name must be between 2 and 50 characters.">
+    
+    <!-- Email Field -->
+    <label for="email">Email <span class="required-indicator">*</span>:</label>
+    <input type="email" id="email" name="email" required
+           title="Please enter a valid email address.">
+    
+    <!-- Comments Field -->
+    <label for="comments">Comments <span class="required-indicator">*</span>:</label>
+    <textarea id="comments" name="comments" rows="4" required minlength="10" maxlength="300"
+              pattern="[A-Za-z0-9\s.,?!']+"
+              title="Comments must be between 10 and 300 characters and may only contain letters, numbers, spaces, and basic punctuation (. , ? ! ')"></textarea>
+    
+    <!-- Hidden Bot Detection Field -->
+    <input type="hidden" name="possible_bot" value="true">
+    
+    <!-- Output Areas for Messages -->
+    <output class="error-output" id="error-output"></output>
+    <output class="info-output" id="info-output"></output>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

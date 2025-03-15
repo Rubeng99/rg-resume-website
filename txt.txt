@@ -1,0 +1,16 @@
+GET /signup?name="Ruben"&email=rug005%xxucsd.edu&comment=%xx HTTP/1.1
+Host: httpbin.org
+User-Agent: Chrome
+Data: Wed,26 Feb 2025
+
+POST/HTTP/1.1
+Host: httpbin.org
+User-Agent: Chrome
+Data: Wed,26 Feb 2025
+Content-Type: application/x-www-form-urlencoded
+Content-length: xx
+name=Ruben&email=rug005@ucsd.edu&comment=xxx
+
+
+
+
