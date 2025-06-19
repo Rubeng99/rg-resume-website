@@ -96,6 +96,9 @@ nav a{
   right: 0;
   top: 0;
 }
+h1{
+    font-size: 1em;
+}
 
 /* Add a grey background color on mouse-over */
 /* .topnav a:hover {
@@ -121,7 +124,7 @@ nav a{
     display: none;
     } 
     h1{
-        font-size: 1em;
+        font-size: 2em;
     }
 }
 
