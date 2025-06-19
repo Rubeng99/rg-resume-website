@@ -10,20 +10,51 @@
     <body style="background-color: #657695;">
         <header>
             <h1> Ruben A Gonzalez </h1>
+
+
+            <!-- <nav> -->
+                
             <nav>
+                
+            <div class ="topnav">
+                <a href="#home" class="active">Pages
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                </a>
+                
+                
+                <div id = "myLinks">
                 <strong>
                 <a href="/courses.html">Courses</a> 
                 <a href="/interest.html">Interests</a> 
                 <a href="/projects.html">Projects</a> 
                 <a href="/index2.html">Index</a> 
-                <!--
-                <a href="https://github.com/rug005?tab=repositories">Github</a> 
                 <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">Linkedin</a> 
                 <a href="mailto:rug005@ucsd.edu">Email</a> 
-                -->
-                <button onclick="myFunction()">Test</button>
+                 <!-- <a href="https://github.com/rug005?tab=repositories">Github</a> \-->
             </strong>
+            </div>
             </nav>
+            <a href="javascript:void(0);" class="icon" onclick="mainFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            </div>
+
+            <!-- Function for Button -->
+            <script>            
+            function mainFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+                }
+            } 
+            </script>
+
+            
+
+
+            <!-- </nav> -->
         </header>
 
         <div id = "div-back"> <!--Testing this div out-->
@@ -52,7 +83,7 @@
         <!-- </div> -->
         </main>
         <br> 
-        <nav> <a href="/experiment.html" style="color:#657695; background-color: #657695; border:#657695">Experimental</a> </nav>
+        
         <!---------------------------------- Splits into my personal projects ---------------------------------->
             <br>
             <h3 id="center-title"> Work </h3>
@@ -147,6 +178,7 @@
                 </list-text>
         </dl>
         </details>
+        <nav> <a href="/experiment.html" style="color:#657695; background-color: #657695; border:#657695">Experimental</a> </nav>
         <footer id="date" style="align-items: center;"><pre> Last Updated June<sup>17th</sup>, 2025 </pre></footer>
         </div>
     </div>  
