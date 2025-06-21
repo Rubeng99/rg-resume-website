@@ -316,3 +316,38 @@ style-off:hover{
     margin: 5px;
     padding: 5px;
 }
+
+
+/* [ Interest Frisbee Section ] */
+.media-wrapper{
+  display:flex;                
+  gap:1rem;                    
+  align-items:flex-start;      
+}
+
+.images{
+  display:flex;                
+  flex-direction:column;
+  flex:1 1 50%;                
+}
+
+.images img{
+  border-radius:8px;
+  margin-left:15px;
+  margin-bottom:1rem;         
+  width:100%;                 
+  height:auto;                
+}
+
+.media-wrapper iframe{
+  flex:1 1 50%;               
+  border:none;                
+  min-height:550px;           
+}
+
+
+@media (max-width:800px){
+  .media-wrapper{
+    flex-direction:column;      
+  }
+}
