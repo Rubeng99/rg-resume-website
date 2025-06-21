@@ -65,6 +65,7 @@ nav a{
 }
 
 
+/* =============[ Mobile Display ]=================== */
 /* Goes from column to row if pixels are 520 */
 @media (max-width: 480px) {
 /* Style the navigation menu */
@@ -108,14 +109,22 @@ h1{
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #3050ed;
+  background-color: #fcfcfc;
   color: white;
+  cursor: not-allowed;
   
 } 
     .center{
         margin-top: 400px;        
     }
+
+    list-text{
+        font-size: .5rem;
+    }
 }
+
+
+/* =============[ Computer Display ]=================== */
 @media not all and (max-width: 480px) {
     /* Apply second set of CSS rules */
     .active {
@@ -123,9 +132,15 @@ h1{
     color: white;
     display: none;
     } 
+    /* Changes the text size of Work, Technical Skills, etc section*/
     h1{
-        font-size: 2em;
+        font-size: .5em;
     }
+    dt{
+        font-size: .8em;
+    }
+
+
 }
 
 
@@ -298,10 +313,6 @@ style-off:hover{
   }
 #div-back{
     border: solid 2px black;
-    margin: 20px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
 }
-
-
-
-

@@ -114,7 +114,7 @@ h1:has(+ p){
   }
 }
 body{
-  background-color: #0071FF;
+  background-color: #05244a;
 }
 @media screen and (min-width:800px) {
   body {
@@ -233,4 +233,18 @@ blockquote{
 .aTab:hover{
   font-size: 2.5em;
   background-color: #e4e4e3;
+}
+
+/* LinkedIn Logo */
+ .linked-img {
+  display: inline-block;
+  border: none;
+  /* background-color: #42526E; */
+  
+}
+
+.linked-img img {
+  display: block;
+  border: none;
+  background-color: #42526E;
 }
