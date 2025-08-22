@@ -212,6 +212,7 @@ h3.align{
     
     padding: 1dvh 10dvw;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
 }
 .row::after{
     content:"";
@@ -226,6 +227,16 @@ h3.align{
 
 #border{
     border: 3px solid var(--black,black);
+}
+
+/* [Main Page]: Work Experience Tab */
+#work-experience{
+    background-color: white; 
+    padding: 10px 10px; 
+    margin: 1px 1px; 
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 200%;
+    
 }
 
 #box{
@@ -315,6 +326,10 @@ style-off:hover{
     border: solid 2px black;
     margin: 5px;
     padding: 5px;
+}
+#background-cover{
+    background-color: #ddddd5;
+    border: solid 6px black;
 }
 
 
