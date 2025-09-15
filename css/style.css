@@ -3,6 +3,7 @@
     --black: #000000;
     --white: #ffffff;
     --backColor: #657695;
+    --sky-blue: #4287f5;
 }
 
 /* This CSS file is used for index and interest html */
@@ -64,7 +65,12 @@ nav a{
     color: var(--black);
 }
 
-
+/* Removes the profile picture from main page after certain size */
+@media (max-width: 800px){
+.container img {
+        display: none;
+}
+}
 /* =============[ Mobile Display ]=================== */
 /* Goes from column to row if pixels are 520 */
 @media (max-width: 480px) {
@@ -74,7 +80,6 @@ nav a{
   background-color: #333;
   position: relative;
 }
-
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
@@ -175,6 +180,12 @@ img.center{
     width: 55dvh;
     
 }
+/* h1 name for Main Page */
+h1.mainPage{
+    font-size: 40px;
+    margin-bottom: 1px;
+}
+
 #app{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -210,7 +221,7 @@ h3.align{
 }
 .text{
     
-    padding: 1dvh 10dvw;
+    padding: 1dvh 5dvw;
     font-family: 'Times New Roman', Times, serif;
     font-size: 200%;
 }
@@ -228,6 +239,7 @@ h3.align{
 #border{
     border: 3px solid var(--black,black);
 }
+
 
 /* [Main Page]: Work Experience Tab */
 #work-experience{
@@ -328,7 +340,8 @@ style-off:hover{
     padding: 5px;
 }
 #background-cover{
-    background-color: #ddddd5;
+    /* background-color: #ddddd5; */
+    background-color: var(--sky-blue);
     border: solid 6px black;
 }
 
