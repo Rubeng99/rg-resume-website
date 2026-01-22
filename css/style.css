@@ -223,7 +223,7 @@ h3.align{
     
     padding: 1dvh 5dvw;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 200%;
+    font-size: 125%;
 }
 .row::after{
     content:"";
@@ -247,7 +247,7 @@ h3.align{
     padding: 10px 10px; 
     margin: 1px 1px; 
     font-family: 'Times New Roman', Times, serif; 
-    font-size: 200%;
+    font-size: 150%;
     
 }
 
@@ -341,7 +341,7 @@ style-off:hover{
 }
 #background-cover{
     /* background-color: #ddddd5; */
-    background-color: var(--sky-blue);
+    background-color: var(--white);
     border: solid 6px black;
 }
 
