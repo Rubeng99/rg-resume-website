@@ -890,28 +890,6 @@ hr {
     border-radius: 6px;
 }
 
-/* A row of media boxes sitting side by side inside one card.
-   `align-items: stretch` (the flex default) makes the shorter box grow to
-   match the taller one, so the embedded page runs the full height of the two
-   stacked photos next to it. */
-.media-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.media-row>.media-box {
-    /* Wraps to a single column once each box can no longer hold 280px. */
-    flex: 1 1 280px;
-    margin: 0;
-}
-
-/* Fills the leftover height of a stretched box rather than sitting at its
-   own min-height. */
-.media-row .media-box iframe {
-    flex: 1 1 auto;
-}
-
 .media-box img,
 .media-box video {
     display: block;

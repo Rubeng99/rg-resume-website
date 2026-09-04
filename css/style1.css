@@ -851,141 +851,15 @@ hr {
    interest.html
    -------------------------------------------------------------------------- */
 
-/* --------------------------------------------------------------------------
-   Picture + text cards (interest.html, projects.html)
-
-   Three nested boxes:
-     .interest    the outer card that holds one topic
-       .card-body the column that stacks the two inner boxes
-         .media-box  pictures, each framed
-         .text-box   the writing, on a light panel with dark text
-   -------------------------------------------------------------------------- */
-
 .interest {
     border: 3px solid var(--white);
-    border-radius: 8px;
-    background-color: #35435c;
     padding: clamp(.75rem, 3vw, 1.25rem);
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
 }
 
-.card-body {
-    /* Plain block flow: the media box sits on top, the text box under it,
-       each spanning the full width of the card at every screen size. */
-    display: block;
-}
-
-.card-body>*+* {
-    margin-top: 1rem;
-}
-
-.media-box {
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    margin: 0;
-    padding: .6rem;
-    background-color: #1d2534;
-    border: 3px solid var(--white);
-    border-radius: 6px;
-}
-
-/* A row of media boxes sitting side by side inside one card.
-   `align-items: stretch` (the flex default) makes the shorter box grow to
-   match the taller one, so the embedded page runs the full height of the two
-   stacked photos next to it. */
-.media-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.media-row>.media-box {
-    /* Wraps to a single column once each box can no longer hold 280px. */
-    flex: 1 1 280px;
-    margin: 0;
-}
-
-/* Fills the leftover height of a stretched box rather than sitting at its
-   own min-height. */
-.media-row .media-box iframe {
-    flex: 1 1 auto;
-}
-
-.media-box img,
-.media-box video {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.media-box figcaption {
-    font-family: var(--font-body);
-    font-size: .95rem;
-    color: var(--white);
-    text-align: center;
-}
-
-.media-box iframe {
-    width: 100%;
-    min-height: 320px;
-    border: 0;
-    border-radius: 4px;
-    background-color: var(--white);
-}
-
-@media (min-width: 801px) {
-    .media-box iframe {
-        min-height: 520px;
-    }
-}
-
-/* The slideshow brings its own controls, so it needs no extra padding. */
-.media-box .slideshow-container {
-    margin: 0;
-}
-
-.media-box .dots {
-    margin-bottom: 0;
-}
-
-.text-box {
-    padding: clamp(.85rem, 2.5vw, 1.35rem);
-    background-color: #ececec;
-    color: var(--black);
-    border: 3px solid var(--black);
-    border-radius: 6px;
-}
-
-/* Dark text on a light panel is easier on the eyes for long prose than
-   white on blue, and the line length is capped so the eye can find the
-   start of the next line. */
-.text-box p {
-    color: var(--black);
-    font-family: var(--font-body);
-    font-size: clamp(1.0625rem, 2.6vw, 1.1875rem);
-    line-height: 1.7;
-    max-width: 66ch;
-    margin: 0 0 1rem;
-}
-
-.text-box p:last-child {
-    margin-bottom: 0;
-}
-
-.text-box a {
-    color: #16357a;
-}
-
-.text-box h3 {
-    margin-top: 0;
-    color: var(--black);
-    font-family: var(--font-display);
-}
-
-.text-box .file-list a {
-    color: #16357a;
+.interest p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fallback-link {
@@ -1016,6 +890,7 @@ hr {
     width: 100%;
     height: auto;
     display: block;
+    border: 3px solid var(--white);
 }
 
 .slide-caption {

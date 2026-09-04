@@ -1,236 +1,187 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/proj.css">
-    <title> Ruben's Website </title>
-   </head>
 
-    <body>
-        <header>
-            <h1> Projects </h1>
-            <nav>
-                <strong>
-                <a href="index.html">Home</a>
-                <a href="courses.html">Courses</a> 
-                <a href="interest.html">Interest</a> 
-                <a href="experiment.html">Experimental</a> 
-                <a href="https://github.com/rug005?tab=repositories">Github</a> 
-                <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">Linkedin</a> 
-                <a href="mailto:rug005@ucsd.edu">Email</a> 
-            </strong>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Projects by Ruben A Gonzalez: theater technical work, Arduino builds, and the ECE 5 team project at UC San Diego.">
+    <meta name="theme-color" content="#42526E">
+    <title>Projects &mdash; Ruben A Gonzalez</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body class="black">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <!--------------- [ Slideshow container ] --------------->
-        <!-- <h1 style="color:white"> Theater Technican Projects</h1> -->
-        <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 5</div>
-            <img src="images/jct-theater-4.jpeg" style="width:100%">
-            <div class="text">SAVAPA Theater Murder Myster</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 5</div>
-            <img src="images/jct-orchestra-2.jpeg" style="width:100%">
-            <div class="text">SHS Orchestra</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img src="images/jct-theater-3.jpeg" style="width:100%">
-            <div class="text">SAVAPA Theater</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 5</div>
-            <img src="images/jct-theater-oz.jpeg" style="width:100%">
-            <div class="text">SAVAPA Theater Wizard Of Oz</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 5</div>
-            <img src="images/jct-theater-2.jpeg" style="width:100%">
-            <div class="text">SAVAPA Theater</div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <!-- <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-        </div> End of pdf page -->
-        <!--------------- [ Slideshow Script ] --------------->
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            } 
-        </script>
-    <!--------------- [ End of slide show script ] --------------->
-
-        <!--
-        <div class="projects" style="margin-top: 130px;">  
-            <nav id="grid-img">
-                <figure style="align-self: flex-end;">
-                    <hr>
-                    <h2> Theater </h2>
-                    
-                <picture style="align-items: center;">
-                    <source media="(max-width:500px)" srcset="images/bts-ani.avif">
-                    <source media="(max-width:800px)" srcset="images/arduino.avif">
-                    <img src="images/parrot-bts.JPG" alt="Working on Animatronics" width="30%">
-                </picture>
-                <figcaption style="margin-top: 10px;">
-                    During a theater show I worked on an Animatronics using an Arduino board. This project
-                    was done in a team of three. One of my partner worked on the 3D design, while my other
-                    partner worked on the cosmetics. My role was to help with the hardware portion, and program
-                    the movements.
-                </figcaption>
-            </figure>                
-            
-             </nav>
-        
-            <nav id="grid-img">
-                <figure id="frame">
-                    <video width="600" height="395" controls>
-                        
-                        <source src="videos/Parrot2.MP4" type="video/mp4"> 
-                        Your browser does not support the video tag.
-                    </video>
-                    <figcaption class="small">The video above shows the mechanics of the wings, and head.
-                        titled.
-                    </figcaption>
-                </figure>
-            </nav>
-        </div>
-        -->
-        
-        <hr>
-        <div id="content">
-            <article>
-            <h2> Personal </h2>
-            <div class="img-container">
-                <img class="frame" src="images/lego-arduino.JPG" alt="Lego Arduino Build" width="500" height="300">
-                <img class="frame" src="images/lego-lightshow.gif" alt="Lego Arduino Build" width="500" height="300">
-            </div>
-                <p> I made an LED light show using Legos and an Arduino. </p>
-            </article>
-        </div>
-
-        <hr>
-        <nav>
-            
-            <a href="https://zaguirre8.wixsite.com/ece5-team-wall-e" style="font-size: 40px;"> ECE 5 Project Website </a>
-            <p style="padding: 5px 80px; margin: 5px; font-size: 40px;"> During my last quarter at UCSD I decided to take a lower division Electrical Engineering course titled "ECE 5".
-                I took this course because it did not feel right to be in the Jacob's School of Engineering without haven taken
-                an ECE course. In this course we learned how to use Onshape to design and print our 3D chassis.
-                We also learned the skills of soldering and working with hardware components. I took the initiative of leading a 
-                team of 4 people by organizing meet up times to work on the build and fix any hardware issues that occur.
-            </p>
-            <button  class="app-button"style="">ECE Slides</button>
-            
-            <!-- Script used to toggle the button (Display ON/OFF) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script>
-            $(document).ready(function(){
-                $("iframe").toggle();
-            $("button").click(function(){
-                $("iframe").toggle();
-            });
-            });
-            </script>
-
-            <!-- Contains the PDF slides used during ECE labs -->
-            <iframe class="myPDF"" src="./pdfs/lab2-part1.pdf" frameborder = "0"></iframe>
-            <iframe class="myPDF"" src="./pdfs/lab2-part2.pdf" frameborder = "0"></iframe>
-            <iframe class="myPDF"" src="./pdfs/lab3.pdf" frameborder = "0"></iframe>
-            </nav>
-        <hr>
-            <h2 style="text-align: center;">
-                Speaker Project
-            </h2>
-            
-            <nav>
-                <video width="520" height="340" controls>
-                    <source src="videos/speaker-project.mp4">
-                </video>
+    <header>
+        <h1>Projects</h1>
+        <nav class="topnav" aria-label="Main">
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="myLinks">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                    <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+                <span>Menu</span>
+            </button>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="experiment.html">Experimental</a></li>
+                <li><a href="https://github.com/rug005?tab=repositories" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169" rel="noopener">LinkedIn</a></li>
+                <li><a href="mailto:rug005@ucsd.edu">Email</a></li>
+            </ul>
         </nav>
+    </header>
 
-        <div id="theater-page">
-            <a href="https://jct-website.netlify.app/">JCT Website</a>
-                
-        </div>
-        <hr>
-        <!---------------------------------- Form to contact me  ---------------------------------->
-        
-        <!-- <h3 id="center-title"> Contact </h3> -->
-         <!-- <h3 class="glow"> Contact </h3>
-        <details> 
-            <summary class="blink_me"> PRESS HERE </summary>
-            <p> &#x26A0; WORK IN PROGRESS &#x26A0; <br> Currently working on implementation.</p>
-           <form action="https://httpbin.org/post" method="post">
-            <fieldset style="margin: 1px 1px; padding: 5px 5px;">
-                <legend> Contact Me </legend>
-                    <label for="fname"> First name:</label> 
-                    <input type="text" id="fname" name = "fname"> 
-                    
-                    <label for="email"> Email:</label>
-                    <input type="email" id="email" name = "email" required>
-                    <span></span>
-                    <br>
-                    <br>
+    <main id="main-content" class="page-main">
 
-   
-                    
-        
-    
-                    <p><label for="msgtext"> Comments </label></p>
-                    <textarea id="comments" name="comments" required maxlength="100" pattern="[A-Za-z]" aria-required="true" >This is a test!</textarea>
-                    <span></span>
-                    <button>Submit</button>
-            </fieldset>
-           </form>
-           </details> -->
+        <section class="interest" aria-labelledby="theater-heading">
+            <h2 class="align" id="theater-heading">Theater technician work</h2>
 
+            <div class="card-body">
+                <div class="media-box is-wide">
+                    <div class="slideshow-container" id="slideshow">
+                        <div class="slides" aria-live="polite">
+                        <figure class="mySlides is-active" id="slide-1"
+                            role="group" aria-roledescription="slide" aria-label="1 of 5">
+                            <img src="images/jct-theater-4.jpeg" alt="SAVAPA Theater murder mystery production" width="1000" height="667"
+                                loading="eager" decoding="async">
+                            <figcaption class="slide-caption">SAVAPA Theater murder mystery</figcaption>
+                        </figure>
+                        <figure class="mySlides" id="slide-2"
+                            role="group" aria-roledescription="slide" aria-label="2 of 5">
+                            <img src="images/jct-orchestra-2.jpeg" alt="Southwest High School orchestra performance" width="1000" height="667"
+                                loading="lazy" decoding="async">
+                            <figcaption class="slide-caption">SHS orchestra</figcaption>
+                        </figure>
+                        <figure class="mySlides" id="slide-3"
+                            role="group" aria-roledescription="slide" aria-label="3 of 5">
+                            <img src="images/jct-theater-3.jpeg" alt="SAVAPA Theater stage lit for a performance" width="1000" height="667"
+                                loading="lazy" decoding="async">
+                            <figcaption class="slide-caption">SAVAPA Theater</figcaption>
+                        </figure>
+                        <figure class="mySlides" id="slide-4"
+                            role="group" aria-roledescription="slide" aria-label="4 of 5">
+                            <img src="images/jct-theater-oz.jpeg" alt="SAVAPA Theater production of the Wizard of Oz" width="1000" height="667"
+                                loading="lazy" decoding="async">
+                            <figcaption class="slide-caption">SAVAPA Theater, Wizard of Oz</figcaption>
+                        </figure>
+                        <figure class="mySlides" id="slide-5"
+                            role="group" aria-roledescription="slide" aria-label="5 of 5">
+                            <img src="images/jct-theater-2.jpeg" alt="SAVAPA Theater stage during a show" width="1000" height="667"
+                                loading="lazy" decoding="async">
+                            <figcaption class="slide-caption">SAVAPA Theater</figcaption>
+                        </figure>
+                        </div>
 
-           <hr>
-        <footer id="date"><pre> Last Updated Sept 4<sup>th</sup>, 2025 </pre></footer>
-            
-    </body>
+                        <button type="button" class="prev" data-step="-1" aria-label="Previous slide">
+                            <span aria-hidden="true">&#10094;</span>
+                        </button>
+                        <button type="button" class="next" data-step="1" aria-label="Next slide">
+                            <span aria-hidden="true">&#10095;</span>
+                        </button>
+                    </div>
+
+                    <div class="dots" role="group" aria-label="Choose a slide">
+                        <button type="button" class="dot is-active" data-slide="1" aria-label="Show slide 1 of 5"></button>
+                        <button type="button" class="dot" data-slide="2" aria-label="Show slide 2 of 5"></button>
+                        <button type="button" class="dot" data-slide="3" aria-label="Show slide 3 of 5"></button>
+                        <button type="button" class="dot" data-slide="4" aria-label="Show slide 4 of 5"></button>
+                        <button type="button" class="dot" data-slide="5" aria-label="Show slide 5 of 5"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interest" aria-labelledby="personal-heading">
+            <h2 class="align" id="personal-heading">Personal</h2>
+
+            <div class="card-body">
+                <figure class="media-box">
+                    <img src="images/lego-arduino.JPG" alt="Lego structure wired to an Arduino board"
+                        width="500" height="300" loading="lazy" decoding="async">
+                    <img src="images/lego-lightshow.gif" alt="The Lego build running an LED light show"
+                        width="500" height="300" loading="lazy" decoding="async">
+                </figure>
+
+                <div class="text-box">
+                    <p>I made an LED light show using Legos and an Arduino.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interest" aria-labelledby="ece-heading">
+            <h2 class="align" id="ece-heading">ECE 5 team project</h2>
+
+            <div class="card-body">
+                <div class="text-box">
+                    <p>
+                        During my last quarter at UC San Diego I took a lower division electrical engineering course,
+                        ECE 5. I took it because it did not feel right to be in the Jacobs School of Engineering
+                        without having taken an ECE course.
+                    </p>
+                    <p>
+                        We learned to use Onshape to design and print a 3D chassis, and practiced soldering and
+                        working with hardware components. I took the initiative of leading a team of four by
+                        organizing meeting times to work on the build and fix hardware issues as they came up.
+                    </p>
+
+                    <h3>Lab slides</h3>
+                    <ul class="file-list">
+                        <li><a href="pdfs/lab2-part1.pdf">Lab 2, part 1 (PDF)</a></li>
+                        <li><a href="pdfs/lab2-part2.pdf">Lab 2, part 2 (PDF)</a></li>
+                        <li><a href="pdfs/lab3.pdf">Lab 3 (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="cta-row">
+                <a class="app-button" href="https://zaguirre8.wixsite.com/ece5-team-wall-e" rel="noopener">
+                    Visit the ECE 5 project site
+                </a>
+            </p>
+        </section>
+
+        <section class="interest" aria-labelledby="speaker-heading">
+            <h2 class="align" id="speaker-heading">Speaker project</h2>
+
+            <div class="card-body">
+                <figure class="media-box">
+                    <video controls preload="metadata" width="520" height="340">
+                        <source src="videos/speaker-project.mp4" type="video/mp4">
+                        Your browser cannot play this video.
+                        <a href="videos/speaker-project.mp4">Download the speaker project video</a>.
+                    </video>
+                </figure>
+
+                <div class="text-box">
+                    <p>A speaker I built and tested. The video shows it running.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interest" aria-labelledby="jct-heading">
+            <h2 class="align" id="jct-heading">Jimmie Cannon Theater website</h2>
+
+            <div class="card-body">
+                <div class="text-box">
+                    <p>A site I built for the theater where I work.</p>
+                    <p><a href="https://jct-website.netlify.app/" rel="noopener">Visit the JCT website</a>.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="date">
+        <p>Last updated <time datetime="2025-09-04">September 03, 2026</time></p>
+    </footer>
+
+    <script src="js/menu.js" defer></script>
+    <script src="js/slideshow.js" defer></script>
+</body>
+
 </html>

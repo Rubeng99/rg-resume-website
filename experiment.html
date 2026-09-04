@@ -1,156 +1,98 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      	<meta name="description" content="Ruben's website showcasing projects, skills, and resume.">
-	      <meta name="keywords" content="Ruben, portfolio, projects, software engineering, IT, UCSD">
-	      <meta name="author" content="Ruben">
-        <link rel="stylesheet" href="css/text.css">
 
-        <title> Experimental </title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="A scratch page where Ruben A Gonzalez experiments with HTML elements and CSS animation.">
+    <meta name="keywords" content="Ruben Gonzalez, portfolio, projects, software engineering, IT, UCSD">
+    <meta name="author" content="Ruben A Gonzalez">
+    <meta name="theme-color" content="#404456">
+    <title>Experimental &mdash; Ruben A Gonzalez</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-experiment">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
-      <h1 class="element"> Experimental Page</h1>
-      <nav>
-          <strong>
-
-        <a class="aTab" href="/html">Home</a>
-        <a href="/html/interest.html">Interests</a>  
-        <a href="/html/projects.html">Projects</a> 
-        <a class="aTab" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Embarrasing Pictures</a> 
-
-          <!--
-          <a class="aTab" href="/courses.html">Courses</a> 
-          <a class="aTab" href="/interest.html">Interests</a> 
-          <a class="aTab" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Embarrasing Pictures</a> 
-          <a class="aTab" href="/projects.html">Projects</a> 
-          -->
-
-        <!-- LinkedIn Image/Link -->
-        <!-- <a class="aTab" href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169">
-        LinkedIn
-        <img id="linkedin" src="Images/linkedin.svg" width="80px" height="80px"/>
-        </a> -->
-      
-      <a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169" class="linked-img">
-      <img src="/images/linkedin.svg" width="250" height="80" alt="LinkedIn" />
-      </a>
-
-      </strong>
-      </nav>
-  </header>
-
-    <hgroup style="margin-bottom: 100px;">
-        <h2>Experimental Page </h2>
-        <p>The purpose of this page is to experiment with different html elements.</p>
-      </hgroup>
+        <h1 class="element">Experimental Page</h1>
+        <nav class="topnav" aria-label="Main">
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="myLinks">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                    <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+                <span>Menu</span>
+            </button>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiment.html" aria-current="page">Experimental</a></li>
+                
+                <li><a href="https://www.linkedin.com/in/ruben-gonzalez-1479b0169" rel="noopener">LinkedIn</a></li>
+                <li><a href="mailto:rug005@ucsd.edu">Email</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <body>
-    <dialog open>
-        <p class="alert"><kbd>Congrats, you found this page!</kbd> </p>
-        <form method="dialog">
-            <audio id="swoosh" src="/music/Swoosh.mp3" type="audio/mp3"></audio>
-            </audio>
-          <button>OK</button>
-        </form>
-      </dialog>
-    
-    <hr>
-    <h1> My favorite...</h1>
-    <p> Caffeinated drink: <del>Cold Brew</del> <ins style="color:green"> Matcha Latte </ins></p>
-    <p> Quote: <cite> “It is better to travel well than to arrive” </cite> </p>
-    <p> Book: <cite>The Godfather</cite> Novel by Mario Puzo </p>
-    <p> Video Game: <cite>Kingdom Hearts</cite> Developers Square Enix/Disney </p>
-    <p> Zoo animal: Meerkats </p>
-    <p> TV show: "Avatar: The Last Airbender" </p>
-    <p> Movie quote, "The Eyes, Chico, They Never Lie." ~Tony Montana</p>
-    <p> Quote from Calc Prof @IVC "Talk is cheap, just do." ~Aleksandr Voldman </p>
-    <hr>
-    <p> If I had an ambudance of money I would travel the world and give back to others in need </p>
+    <main id="main-content" class="page-main">
 
-  
-    <!-- <button onclick="showContent()">Show hidden content</button> -->
+        <div class="notice" role="note">
+            <p>Congrats, you found this page.</p>
+        </div>
 
-    <template>
-      <h2>Book</h2>
-      <img src="/images/arduino.avif" width="214" height="204">
-    </template>
-    
-    <script>
-    function showContent() {
-      let temp = document.getElementsByTagName("")[0];
-      let clon = temp.content.cloneNode(true);
-      document.body.appendChild(clon);
-    }
-    </script>
-    <noscript> Your browser DOESN'T support JavaScript </noscript>
+        <hgroup>
+            <h2>What this page is for</h2>
+            <p>A place to experiment with different HTML elements.</p>
+        </hgroup>
 
-    <!-- <dfn> Novels </dfn> a fictitious prose narrative of book length, typically representing character and action with some degree of realism. -->
+        <hr>
 
-    
-    <!-- <form "/action_page.php">
-    <label for="coffee"> Choose a drink </label>
-    <select name = "coffee">
-        <option value = "Cold Brew"> Cold Brew </option>
-        <option value = "Latte"> Latte </option>
-        <option value = "Soda"> Soda </option>
-    </select>  
-    <input type = "submit" value = "Submit">
-    </form>
-    <textarea id="w3review" name="w3review" rows="4" cols="50">
-        Reason you choose this drink
-    </textarea>
-    <hr> -->
+        <h2>My favorite&hellip;</h2>
+        <dl class="favorites">
+            <dt>Caffeinated drink</dt>
+            <dd><del>Cold brew</del> <ins>Matcha latte</ins></dd>
 
-      <!-- <hr> -->
+            <dt>Quote</dt>
+            <dd><blockquote>It is better to travel well than to arrive.</blockquote></dd>
 
-      <!-- <h2 style="text-align: center; font-family:RGFont">Search website</h1> -->
-    <!-- <nav>
-    
-    <search>
-        <form action="#q">
-        <label for="movie">Search</label>
-         <input type="search" id="movie" name="q" />
-         <button type="submit">Search</button>
-    </form>
-    </search>
-  </nav> -->
-  <!-- <hr> -->
+            <dt>Book</dt>
+            <dd><cite>The Godfather</cite>, a novel by Mario Puzo</dd>
 
-  <!-- <label for="main"> Select a category: </label>
-  <select name="main" id="main">
-      <optgroup label="Main Website">
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-      </optgroup>
-      <optgroup label="Projects">
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-      </optgroup>
-  </select> -->
+            <dt>Video game</dt>
+            <dd><cite>Kingdom Hearts</cite>, by Square Enix and Disney</dd>
 
-  <!-- <hr> -->
-  <nav>
+            <dt>Zoo animal</dt>
+            <dd>Meerkats</dd>
 
-  
-<!-- 
-<div class="loader">
-  <div id="box"></div>
-  <div id="hill"></div>
-</div> -->
+            <dt>TV show</dt>
+            <dd><cite>Avatar: The Last Airbender</cite></dd>
 
-<!-- <script> 
-  var loadingScreen = document.querySelector(".loader");
-  window.addEventListener('load', function() { 
-  loadingScreen.style.display = 'none';
-})
-</script>
-     -->
-  <footer id="date"><pre> Last Updated June 19<sup>th</sup>, 2025 </pre></footer>
-    </body>
-   
+            <dt>Movie quote</dt>
+            <dd><blockquote>The eyes, chico. They never lie.</blockquote>Tony Montana</dd>
+
+            <dt>Quote from a calculus professor at IVC</dt>
+            <dd><blockquote>Talk is cheap, just do.</blockquote>Aleksandr Voldman</dd>
+        </dl>
+
+        <hr>
+
+        <p>If I had an abundance of money I would travel the world and give back to others in need.</p>
+
+        <noscript>
+            <p>This page works fine without JavaScript. Some interactive extras are turned off.</p>
+        </noscript>
+
+    </main>
+
+    <footer id="date">
+        <p>Last updated <time datetime="2025-06-19">Sept 03, 2026</time></p>
+    </footer>
+
+    <script src="js/menu.js" defer></script>
+</body>
 
 </html>

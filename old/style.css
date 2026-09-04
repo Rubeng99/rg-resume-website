@@ -1,0 +1,381 @@
+:root{
+    --grey-blue: #42526E; 
+    --black: #000000;
+    --white: #ffffff;
+    --backColor: #657695;
+    --sky-blue: #4287f5;
+}
+
+/* This CSS file is used for index and interest html */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+    padding: 1px;
+    border: 1px solid var(--black,black);
+    background-color: var( --grey-blue,grey);
+    color: #ffffff
+}
+h1{
+    font-family: RGFont;
+    font-size: 50px;
+}
+body.below-body{
+    padding-top: 150px;
+    background-color: var(--grey-blue,blue);
+}
+main{
+    margin-top: 125px;
+    border: 3px solid #000000;
+    background-color: var(--grey-blue,blue);
+    border-radius: 5px;
+    
+}
+p.right{
+    text-align: center;
+}
+.small{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px 5px;
+    margin: 0 0;
+}
+h2, h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* Used in index.html to Home, etc */
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8px;
+    gap: 15px;
+}
+nav a{
+    text-decoration: none;
+    padding: 5px 5px;
+    margin: 1px 0px;
+    border: 2px solid var(--black);
+    background-color: #ffffff;
+    color: var(--black);
+}
+
+/* Removes the profile picture from main page after certain size */
+@media (max-width: 800px){
+.container img {
+        display: none;
+}
+}
+/* =============[ Mobile Display ]=================== */
+/* Goes from column to row if pixels are 520 */
+@media (max-width: 480px) {
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+h1{
+    font-size: 1em;
+}
+
+/* Add a grey background color on mouse-over */
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #fcfcfc;
+  color: white;
+  cursor: not-allowed;
+  
+} 
+    .center{
+        margin-top: 400px;        
+    }
+
+    list-text{
+        font-size: .5rem;
+    }
+    
+}
+
+
+/* =============[ Computer Display ]=================== */
+@media not all and (max-width: 480px) {
+    /* Apply second set of CSS rules */
+    .active {
+    background-color: #2e59ce;
+    color: white;
+    display: none;
+    } 
+    /* Changes the text size of Work, Technical Skills, etc section*/
+    h1{
+        font-size: .5em;
+    }
+    dt{
+        font-size: .8em;
+    }
+
+}
+
+
+
+.nav a:hover{
+    background-color: rgb(38, 42, 255);
+}
+div.center{
+    flex-direction: row;
+}
+div.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 3px solid white;
+    background-color: #d8d8d8;
+
+}
+body.black{
+    background-color: var(--black,black);
+    padding: 1px 2px;
+    color: white;
+    padding-top: 150px;
+}
+img.center{
+    display: block;
+    border: 5px solid #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    /* width: 35%; */
+    width: 55dvh;
+    
+}
+/* h1 name for Main Page */
+h1.mainPage{
+    font-size: 40px;
+    margin-bottom: 1px;
+}
+
+#app{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    
+}
+#frame{
+    border: 5px solid #ffffff;
+    margin: 0 0;
+    padding: 0 0;
+    width: 130%;
+}
+h3.align{
+    padding: 1px 10px;
+    margin: 2px 5px;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    border: 3px #ffffff;
+    background-color: #42526E;
+    border-style: outset;
+    text-align: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white,(255, 255, 255));
+    color: rgb(0, 0, 0);
+ 
+}
+.image{
+    max-width: 100%;
+    max-height: 100%;
+}
+.text{
+    
+    padding: 1dvh 5dvw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 125%;
+}
+.row::after{
+    content:"";
+    clear: both;
+    display:table;
+}
+.column{
+    float:left;
+    width:33.33%;
+    padding:5px;
+}
+
+#border{
+    border: 3px solid var(--black,black);
+}
+
+
+/* [Main Page]: Work Experience Tab */
+#work-experience{
+    background-color: white; 
+    padding: 10px 10px; 
+    margin: 1px 1px; 
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 150%;
+    
+}
+
+#box{
+    border: 3px solid var(--black,black);
+    flex: 1;
+    padding: 1px 5px;
+    margin: 1px 1px;
+    background-color: rgb(199, 194, 194);
+    transition: all 100ms ease-out;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+#box:hover{
+    background-color: white;
+    
+}
+#box2{
+    border: 3px solid var(--black,black);
+    padding: 2px 40px;
+    background-color: white;
+    margin: 1px 1px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.blink_me{
+    text-align: center;
+    padding: 1px 1px;
+    background-color: rgb(217, 217, 217);
+    color:black;
+    margin: 1px 1px;
+    border-style: outset;
+    animation: blinker 2s linear infinite;
+}
+@keyframes blinker{
+    80%{
+        opacity: 50;
+    }
+}
+#center-title{
+    text-align: center;
+    padding: 1px 1px;
+    background-color: rgb(217, 217, 217);
+    margin-bottom: 1px;
+    
+    border-style: outset;
+}
+#white-border{
+    border: 3px solid #ffffff;
+    margin: 1px 10px;
+}
+#date{
+    border: 2px solid var(--black),black;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--grey-blue,grey);
+}
+
+@font-face {
+    font-family: RGFont;
+    src: url(RGFont-Regular.ttf);
+}
+
+list-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 2px;
+}
+
+#style-button{
+    color: black;
+    cursor: pointer;
+}
+style-off:hover{
+    font-size: 2rem;  
+}
+#lights-off{
+    background: rgb(43, 226, 107);
+}
+
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+#div-back{
+    border: solid 2px black;
+    margin: 5px;
+    padding: 5px;
+}
+#background-cover{
+    /* background-color: #ddddd5; */
+    background-color: var(--white);
+    border: solid 6px black;
+}
+
+
+/* [ Interest Frisbee Section ] */
+.media-wrapper{
+  display:flex;                
+  gap:1rem;                    
+  align-items:flex-start;      
+}
+
+.images{
+  display:flex;                
+  flex-direction:column;
+  flex:1 1 50%;                
+}
+
+.images img{
+  border-radius:8px;
+  margin-left:15px;
+  margin-bottom:1rem;         
+  width:100%;                 
+  height:auto;                
+}
+
+.media-wrapper iframe{
+  flex:1 1 50%;               
+  border:none;                
+  min-height:550px;           
+}
+
+
+@media (max-width:800px){
+  .media-wrapper{
+    flex-direction:column;      
+  }
+}
